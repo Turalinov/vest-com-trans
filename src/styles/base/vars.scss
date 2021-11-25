@@ -1,14 +1,18 @@
-$black: #0f0f0f;
+$brown: #344848;
+$gray: #efefef;
+$green-dark: #358e8d;
+$red: #945053;
+$gray-dark: #f2f2f2;
+$green: #55a8a7;
 $white: #fff;
-$orange: #E55812;
-
-
-$breakpoint-tablet: 1023px;
-$breakpoint-mobile: 768px;
-$containerWidth: 1240px;
+$breakpoint-desktop: 1500px;
+$breakpoint-tablet: 1200px;
+$breakpoint-mobile: 700px;
+$containerWidth: 1640px;
 
 $z-index-menu-header: 10;
 $z-index-menu-toggle: 30;
 $z-index-logo: 30;
+$z-index-phone: 30;
 $z-index-menu-dropdown: 20;
 $z-index-modal: 1000;

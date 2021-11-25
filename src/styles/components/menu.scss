@@ -1,6 +1,38 @@
 .menu {
   display: flex;
   align-items: center;
+
+  @include tablets {
+    order: 30;
+    width: 100%;
+    padding: 30px 0;
+    margin-top: 7px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: -10%;
+      top: 0;
+      width: 150%;
+      height: 100%;
+      background-color: $gray;
+      z-index: -1;
+    }
+  }
+
+  @include phones {
+    width: initial;
+    padding: 0;
+    margin-top: 0;
+    margin-left: 24px;
+
+
+    &::after {
+      display: none;
+    }
+
+  }
 }
 
 .menu--opened {
@@ -9,22 +41,19 @@
   }
 
   & .menu__toggle {
-
     & span {
       display: none;
     }
 
     &::before {
-      top: 8px;
+      top: 12px;
       transform: rotate(45deg);
     }
 
     &::after {
-      top: 8px;
-      width: 100%;
+      top: 12px;
       transform: rotate(-45deg);
     }
-
   }
 }
 
@@ -32,11 +61,10 @@
   position: relative;
   z-index: $z-index-menu-toggle;
   display: none;
-  width: 20px;
-  height: 16px;
-  font-size: 0;
+  width: 40px;
+  height: 24px;
 
-  @include tablets {
+  @include phones {
     display: block;
   }
 
@@ -46,17 +74,14 @@
     position: absolute;
     left: 0;
     width: 100%;
-    height: 1px;
-    background-color: $white;
-    transition: all 0.8s ease;
+    height: 3px;
+    background-color: $green;
+    transition: 0.8s ease;
   }
 
   & span {
     top: 50%;
     transform: translateY(-50%);
-    left: auto;
-    right: 0;
-    width: 15px;
   }
 
   &::before,
@@ -73,24 +98,19 @@
   }
 }
 
-
 .menu__dropdown {
 
-  @include tablets {
+  @include phones {
     position: fixed;
     left: 0;
     right: 0;
     top: -150%;
     height: 100%;
     z-index: $z-index-menu-dropdown;
-    padding: 80px 20px 40px 20px;
+    padding: 150px 20px 40px 20px;
     overflow: auto;
-    background-color: $black;
-    background-image: url("images/bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transition: all 1s ease;
+    background-color: $gray;
+    transition: 1s ease;
   }
 
 }
@@ -99,54 +119,42 @@
   display: flex;
   align-items: center;
 
-  @include tablets() {
+  @include phones {
     flex-direction: column;
   }
 }
 
-.menu__item {
-  @include tablets {
-    width: 100%;
-    text-align: center;
-    position: relative;
-  }
-
-  &::before {
-    @include tablets {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background-color: rgba($white, 0.1);
-    }
-  }
-}
-
 .menu__item + .menu__item {
-  margin-left: 30px;
+  margin-left: 62px;
 
-  @include tablets {
+  @include desktop {
+    margin-left: 41px;
+  }
+
+  @include phones {
     margin-left: 0;
+    margin-top: 30px;
   }
 }
 
 .menu__link {
-  position: relative;
   display: inline-block;
-  color: rgba($white, 0.7);
-  transition: 0.5s;
+  color: $brown;
+  transition: all 0.5s;
+  text-decoration: none;
+  font-size: 20px;
 
-  @include tablets {
-    width: 100%;
-    padding: 15px 0;
+  @include desktop {
+    font-size: 18px;
+  }
+
+  @include phones {
+    font-size: 20px;
+    text-transform: uppercase;
   }
 }
 
-
 .menu__item:hover .menu__link,
 .menu__item--active .menu__link {
-  color: $white;
+  color: #1a1f1f;
 }
-

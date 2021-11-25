@@ -14,36 +14,33 @@ body {
 }
 
 body {
-  font-size: 16px;
-  line-height: 1.42;
+  @include inter(medium);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @include raleway();
-  color: $white;
-  background-color: $black;
-  background-image: url("images/bg.png");
-  background-repeat: repeat;
-  background-position: center;
-  background-size: contain;
+  font-size: 18px;
+  line-height: 1.42;
+  color: $brown;
+  background-color: $white;
 }
 
 .body--locked {
   overflow: hidden;
 }
 
-
 ul {
   margin: 0;
   padding: 0;
 }
 
-ul>li {
+ul > li {
   list-style: none;
 }
 
-
-input:not([type=checkbox]):not([type=radio]),
+input:not([type="checkbox"]):not([type="radio"]),
 select {
+  width: 100%;
+
   // width: 100%;
   // outline: none;
   // background: #FFFFFF;
@@ -59,27 +56,24 @@ select {
 }
 
 a {
-  color: rgba($white, 0.5);
-  text-decoration: none;
+  color: $gray;
 }
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
-  @include syncopate();
+h3 {
+  @include raleway(bold);
+
   margin: 0;
   padding: 0;
+  line-height: initial
 }
 
 h1 {
-  font-size: 75px;
-  line-height: 1.2;
+  font-size: 64px;
 
   @include tablets {
-    font-size: 45px;
+    font-size: 36px;
   }
 
   @include phones {
@@ -88,56 +82,31 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 48px;
 
   @include tablets {
-    font-size: 24px;
+    font-size: 36px;
   }
 
   @include phones {
-    font-size: 16px;
+    font-size: 24px;
   }
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 36px;
 
   @include tablets {
-    font-size: 16px;
+    font-size: 30px;
   }
 
   @include phones {
-    font-size: 14px;
-  }
-}
-
-h4 {
-  font-size: 18px;
-
-  @include tablets {
-    font-size: 14px;
-  }
-
-  @include phones {
-    font-size: 14px;
-  }
-}
-
-h5 {
-  font-size: 16px;
-
-
-  @include phones {
-    font-size: 14px;
+    font-size: 20px;
   }
 }
 
 p {
   margin: 0;
-
-  @include phones {
-    font-size: 14px;
-  }
 }
 
 img {
@@ -145,17 +114,45 @@ img {
   max-width: 100%;
 }
 
-
 .wrapper {
-  overflow: hidden;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
 }
 
 .wrapper__content {
   flex: 1;
 }
+
+.section {
+  padding: 100px 0;
+
+  @include tablets {
+    padding: 90px 0;
+  }
+
+  @include phones {
+    padding: 75px 0;
+  }
+}
+
+.main {
+  margin-top: 132px;
+
+  @include desktop {
+    margin-top: 127px;
+  }
+
+  @include tablets {
+    margin-top: 155.55px;
+  }
+
+  @include phones {
+    margin-top: 64px;
+  }
+}
+
 
 /* .dot {
   display: inline;
@@ -275,7 +272,6 @@ img {
   }
 }
 
-
 @keyframes radio1-mob {
   0% {
     width: 0;
@@ -296,9 +292,6 @@ img {
     opacity: 0;
   }
 }
-
-
-
 
 @keyframes radio2-mob {
   0% {
@@ -346,7 +339,6 @@ img {
   }
 }
 
-
 @keyframes showTech2 {
   from {
     transform: scale(1.2) translate(30px, -30px);
@@ -358,8 +350,6 @@ img {
     opacity: 1;
   }
 }
-
-
 
 @keyframes showTech3 {
   from {
@@ -412,16 +402,3 @@ img {
 
 //   }
 // }
-
-
-main {
-  margin-top: 114px;
-
-  @include tablets {
-    margin-top: 64px;
-  }
-
-  @include phones {
-    margin-top: 56px;
-  }
-}

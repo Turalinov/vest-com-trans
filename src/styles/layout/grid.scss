@@ -3,4 +3,8 @@
   padding: 0 20px;
   height: 100%;
   max-width: $containerWidth;
+
+  @include tablets {
+    padding: 0 15px;
+  }
 }

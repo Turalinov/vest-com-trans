@@ -1,0 +1,104 @@
+.services {
+  background-color: $green;
+  color: $gray;
+}
+
+.services__title {
+  margin-bottom: 40px;
+
+  @include tablets {
+    margin-bottom: 35px;
+  }
+
+  @include phones {
+    margin-bottom: 20px;
+  }
+}
+
+.services__list {
+  display: flex;
+  margin-bottom: 40px;
+
+  @include tablets {
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-top: -20px;
+  }
+
+  @include tablets {
+    margin-bottom: 40px;
+  }
+
+  @include phones {
+    margin-bottom: 30px;
+    margin-top: -10px;
+  }
+}
+
+.services__item {
+  color: $brown;
+  padding: 45px 31px;
+  flex: 1 1 388px;
+  min-height: 252px;
+  background-color: $white;
+  border-radius: 14px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  line-height: 1.6;
+  position: relative;
+
+  @include desktop {
+    font-size: 18px;
+    padding: 45px 35px 45px 25px;
+  }
+
+  @include tablets {
+    padding: 45px 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    flex: 1 1 47%;
+  }
+
+  @include phones {
+    flex: 1 1 100%;
+    margin-top: 10px;
+  }
+
+  &::after {
+    @include inter(bold);
+    display: block;
+    content: "1";
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    font-size: 180px;
+    color: rgba(#45C8C6, 15%);
+
+    @include desktop {
+      right: -20px;
+    }
+
+    @include tablets {
+      right: 0px;
+    }
+
+  }
+
+  @include content;
+}
+
+
+
+.services__item + .services__item {
+  margin-left: 16px;
+
+  @include tablets {
+    margin-left: 20px;
+  }
+}
+
+.services__btn {
+  display: inline-block;
+  text-decoration: none;
+}
+

@@ -1,30 +1,40 @@
-@mixin syncopate() {
-  font-family: 'Syncopate',
-    Arial,
-    sans-serif;
-  font-weight: 700;
-}
+@mixin inter($style: regular) {
+  font-family: "Inter", "Arial", sans-serif;
 
-@mixin raleway($style: regular) {
-
-  font-family: "Raleway",
-  Arial,
-  sans-serif;
-
-  @if $style==regular {
+  @if $style == regular {
     font-weight: 400;
   }
 
-  @if $style==medium {
+  @if $style == medium {
     font-weight: 500;
   }
 
-  @if $style==semibold {
+  @if $style == semibold {
     font-weight: 600;
   }
 
+  @if $style == bold {
+    font-weight: 700;
+  }
 }
 
+@mixin raleway($style: regular) {
+  font-family: "Raleway", "Arial", sans-serif;
+
+  @if $style == medium {
+    font-weight: 500;
+  }
+
+  @if $style == bold {
+    font-weight: 700;
+  }
+}
+
+@mixin desktop() {
+  @media screen and (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
 
 @mixin tablets() {
   @media screen and (max-width: $breakpoint-tablet) {
@@ -35,5 +45,16 @@
 @mixin phones() {
   @media screen and (max-width: $breakpoint-mobile) {
     @content;
+  }
+}
+
+
+@mixin content {
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      &:after {
+        content: '#{$i}';
+      }
+    }
   }
 }

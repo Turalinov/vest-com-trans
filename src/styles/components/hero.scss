@@ -1,0 +1,78 @@
+.hero {
+  background-image: url("images/hero-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  padding: 128px 0 256px;
+  overflow: hidden;
+
+  @include desktop {
+    padding: 180px 0 235px;
+  }
+
+  @include tablets {
+    padding: 90px 0 205px;
+
+  }
+}
+
+.hero > .container {
+  position: relative;
+}
+
+.hero__title {
+  margin-bottom: 20px;
+
+  @include tablets {
+    margin-bottom: 8px;
+  }
+}
+.hero__desc {
+  font-size: 24px;
+  max-width: 428px;
+  margin-bottom: 25px;
+
+  @include tablets {
+    max-width: 315px;
+    margin-bottom: 20px;
+  }
+}
+
+.hero__btn {
+  display: inline-block;
+  z-index: 1;
+}
+
+.hero__cargo {
+  position: absolute;
+  top: -685px;
+  left: calc(50% - 156px);
+  width: 1747px;
+  height: 1435px;
+  background-image: url("images/hero-cargo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  pointer-events: none;
+
+  @include desktop {
+    left: calc(50% - 44px);
+  }
+
+  @include tablets {
+    background-image: url("images/hero-cargo-tablets.png");
+    width: 954px;
+    height: 783px;
+    left: calc(50% - 60px);
+    top: -291px;
+  }
+
+  @include phones {
+    background-image: url("images/hero-cargo-mobile.png");
+    width: 327px;
+    height: 378px;
+    left: calc(50% + 37px);
+    top: 139px;
+  }
+}
