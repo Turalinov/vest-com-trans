@@ -1,0 +1,110 @@
+.about {
+  overflow: hidden;
+}
+
+.about > .container {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 913px;
+    height: 793px;
+    background-image: url("images/about.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -211px;
+    left: -359px;
+    transform: rotate(338deg);
+
+    @include desktop {
+      background-image: url("images/about-desktop.png");
+      width: 876px;
+      height: 749px;
+      top: -110px;
+      left: -430px;
+      transform: rotate(-19deg);
+    }
+
+    @include tablets {
+      background-image: url("images/about-tablets.png");
+      width: 741px;
+      height: 783px;
+      top: 44px;
+      left: initial;
+      right: -535px;
+      transform: rotate(29deg);
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+}
+
+
+
+.acout__wrap {
+  max-width: 55%;
+  margin-left: auto;
+
+  @include desktop {
+    max-width: 52%;
+  }
+
+  @include tablets {
+    max-width: 64%;
+    margin-left: initial;
+    margin-bottom: 150px;
+  }
+
+  @include phones {
+    max-width: 100%;
+    margin-bottom: initial;
+  }
+}
+
+.about__title {
+  margin-bottom: 27px;
+
+  @include tablets {
+    margin-bottom: 25px;
+  }
+
+  @include phones {
+    margin-bottom: 10px;
+  }
+}
+
+.about__desc {
+  @include inter(regular);
+  margin-bottom: 43px;
+  font-size: 24px;
+
+  @include tablets {
+    font-size: 18px;
+  }
+
+  @include phones {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+.about__desc > span {
+  @include inter(medium);
+}
+
+.about__btn.btn {
+
+  @include tablets {
+    padding: 23px 40px;
+    z-index: 1;
+  }
+
+  @include phones {
+    padding: 17px 40px;
+  }
+}
+

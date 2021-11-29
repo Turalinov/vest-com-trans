@@ -23,6 +23,8 @@
 
 .hero__title {
   margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
 
   @include tablets {
     margin-bottom: 8px;
@@ -32,6 +34,8 @@
   font-size: 24px;
   max-width: 428px;
   margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
 
   @include tablets {
     max-width: 315px;
@@ -64,15 +68,17 @@
     background-image: url("images/hero-cargo-tablets.png");
     width: 954px;
     height: 783px;
-    left: calc(50% - 60px);
-    top: -291px;
+    left: calc(45%);
+    top: -250px;
   }
 
-  @include phones {
+
+  @media screen and (max-width: 441px) {
     background-image: url("images/hero-cargo-mobile.png");
     width: 327px;
     height: 378px;
-    left: calc(50% + 37px);
-    top: 139px;
+    left: calc(50% - 107px);
+    top: 149px;
   }
+
 }

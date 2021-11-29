@@ -14,6 +14,8 @@ button {
   background-color: $green;
   transition: .2s ease;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 
   &:hover {
     background-color: $green-dark;
