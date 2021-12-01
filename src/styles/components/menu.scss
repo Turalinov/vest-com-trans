@@ -125,10 +125,10 @@
 }
 
 .menu__item + .menu__item {
-  margin-left: 62px;
+  margin-left: 47px;
 
   @include desktop {
-    margin-left: 41px;
+    margin-left: 28px;
   }
 
   @include phones {

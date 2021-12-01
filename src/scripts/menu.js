@@ -3,6 +3,7 @@
   const menuToggle = document.querySelector('.menu__toggle');
 
   if (menuToggle) {
+
     const menu = document.querySelector('.menu');
     const body = document.querySelector('body')
 
@@ -19,15 +20,25 @@
 
   menuLinks.forEach((menuLink) => {
     menuLink.addEventListener('click', (e) => {
-      e.preventDefault();
+
 
       let blockId = menuLink.getAttribute('href')
-      if (blockId != "#") {
-        document.querySelector(blockId).scrollIntoView({
+
+      if (blockId.indexOf('#') === 0) {
+        e.preventDefault();
+
+
+        const el = document.querySelector(blockId);
+
+        if(el) {
+          el.scrollIntoView({
           behavior: 'smooth',
         })
-      }
 
+        }
+      } else {
+
+      }
 
 
       if (menu.classList.contains('menu--opened')) {
@@ -41,8 +52,8 @@
 
 
 
-
   }
+
 
 
 
