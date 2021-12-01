@@ -1,0 +1,142 @@
+.cargo-slider { /*swiper-container*/
+  position: relative;
+}
+
+.cargo-slider__wrapper { /*swipper-wrapper*/
+  width: auto;
+  flex-wrap: wrap;
+  margin-left: -67px;
+  margin-top: -30px;
+
+  @include desktop {
+    margin-left: -177px;
+  }
+
+  @include tablets {
+    flex-wrap: initial;
+    margin-bottom: 35px;
+    margin-left: -22px;
+  }
+
+  @include phones {
+    margin-left: 0;
+  }
+
+
+}
+
+.cargo-slider__slide {
+  width: calc(100% / 3 - 67px);
+  margin-left: 67px;
+  margin-top: 30px;
+
+  @include desktop {
+    width: calc(100% / 2 - 177px);
+    margin-left: 177px;
+  }
+
+  @include tablets {
+    margin-left: 22px;
+  }
+
+  @include phones {
+    margin-left: 0;
+  }
+
+
+}
+
+.cargo-slider__content {
+  //
+}
+
+.cargo-slider__text {
+  font-size: 24px;
+  margin-bottom: 5px;
+
+  @include phones {
+    min-height: 51px;
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+}
+
+.cargo-slider__image-wrap {
+  //
+}
+
+.cargo-slider__image {
+  //
+}
+
+//controls
+.cargo-slider__controls {
+  display: none;
+
+  @include tablets {
+    position: relative;
+    max-width: 259px;
+    height: 68px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+//pagination
+.cargo-slider .cargo-slider__controls > .swiper-pagination {
+  @include tablets {
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+}
+
+// prev
+.cargo-slider .cargo-slider__controls > .swiper-button-prev {
+  @include tablets {
+    left: initial;
+  }
+}
+
+//next
+.cargo-slider .cargo-slider__controls > .swiper-button-next {
+  @include tablets {
+    right: 0;
+  }
+}
+
+
+.cargo-slider .cargo-slider__controls > .swiper-button-prev,
+.cargo-slider .cargo-slider__controls > .swiper-button-next {
+  top: 0;
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dedede;
+  border-radius: 50%;
+  color: #000;
+  margin-top: initial;
+}
+
+.cargo-slider .cargo-slider__controls > .swiper-button-prev::after,
+.cargo-slider .cargo-slider__controls > .swiper-button-next::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cargo-slider .cargo-slider__controls>.swiper-button-prev:hover,
+.cargo-slider .cargo-slider__controls>.swiper-button-next:hover {
+  background-color: $green;
+  color: $white;
+}
+
+.cargo-slider .cargo-slider__controls .swiper-pagination .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+}
+
+
+.cargo-slider .cargo-slider__controls .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: $green-dark;
+}

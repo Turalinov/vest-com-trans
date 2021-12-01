@@ -1,0 +1,12 @@
+.cargo {
+  //
+}
+
+.cargo__title {
+  margin-bottom: 33px;
+
+  @include phones {
+    margin-bottom: 22px;
+  }
+}
+
