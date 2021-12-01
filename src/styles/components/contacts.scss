@@ -1,0 +1,177 @@
+.contacts {
+  //
+}
+
+.contacts__title {
+  margin-bottom: 30px;
+
+  @include tablets {
+    margin-bottom: 45px;
+  }
+
+  @include phones {
+    margin-bottom: 30px;
+  }
+}
+
+.contacts__container {
+  @include phones {
+    padding: 0;
+  }
+}
+
+.contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-top: -20px;
+  margin-bottom: 70px;
+
+  @include desktop {
+    margin-left: -15px;
+    margin-top: -15px;
+    margin-bottom: 50px;
+  }
+
+  @include tablets {
+    margin-left: 0;
+    margin-top: -15px;
+    margin-bottom: 50px;
+  }
+
+  @include phones {
+    //
+  }
+}
+
+.contacts__item {
+  width: calc(100%/3 - 20px);
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 45px;
+  background-color: #ececec;
+  min-height: 255px;
+  border-radius: 14px;
+  transition: .2s;
+
+  @include desktop {
+    width: calc(100%/2 - 15px);
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+
+  @include tablets {
+    width: 100%;
+    margin-left: 0;
+    min-height: initial;
+  }
+
+  @include phones {
+    padding: 45px 20px;
+    border-radius: 0px;
+  }
+}
+
+.contacts__item--active,
+.contacts__item:hover {
+  background-color: $blue;
+  color: $gray;
+}
+
+.contacts__item--active .contacts__email {
+  text-decoration: underline;
+}
+
+.contacts__position {
+  font-size: 24px;
+  margin-bottom: 20px;
+
+  @include phones {
+    font-size: 20px;
+  }
+}
+
+.contacts__info {
+  font-size: 20px;
+
+  @include phones {
+    font-size: 16px;
+  }
+}
+
+.contacts__info-top {
+  margin-top: 5px;
+}
+
+.contacts__fullname {
+  //
+}
+
+.contacts__abbr {
+  color: $red;
+  @include inter(bold);
+  margin-left: 20px;
+
+  @include phones {
+    margin-left: 10px;
+  }
+}
+
+.contacts__email {
+  margin-top: 5px;
+}
+
+.contacts__phone {
+  margin-top: 5px;
+}
+
+
+
+.contacts__row {
+  display: flex;
+  margin-left: -40px;
+
+  @include tablets {
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: -30px;
+  }
+
+  @include phones {
+    margin-top: -15px;
+  }
+}
+
+.contacts__col {
+  width: calc(100% - 40px);
+  margin-left: 40px;
+
+  @include tablets {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  @include phones {
+    margin-top: 15px;
+  }
+}
+
+.contacts__subtitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+
+  @include phones {
+    font-size: 20px;
+  }
+
+
+}
+
+.contacts__desc {
+  font-size: 18px;
+  @include inter(regular);
+
+  @include phones {
+    font-size: 16px;
+  }
+}

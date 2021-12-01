@@ -73,7 +73,7 @@
             slidesPerView: 1.5,
             //оступ между слайдами
             spaceBetween: 0,
-          },
+          },  
         },
     })
   }
