@@ -1,0 +1,508 @@
+.project {
+  background-color: $green;
+  color: $gray;
+  padding: 100px 0 100px;
+
+  @include phones {
+    padding: 70px 0 70px;
+  }
+}
+
+.project__title {
+  margin-bottom: 13px;
+
+  @include tablets {
+    margin-bottom: 24px;
+  }
+
+  @include phones {
+    margin-bottom: 10px;
+  }
+}
+
+.project__desc {
+  font-size: 24px;
+  max-width: 575px;
+  margin-bottom: 46px;
+
+  @include tablets {
+    margin-bottom: 60px;
+  }
+
+  @include phones {
+    font-size: 18px;
+    margin-bottom: 22px;
+    max-width: 301px;
+  }
+}
+
+.project__wrap {
+  margin-bottom: 42px;
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    margin-bottom: 18px;
+  }
+
+  @include phones {
+    margin-bottom: 8px;
+  }
+}
+
+.project__top {
+  flex-basis: 33.9%;
+
+  @include desktop {
+    flex-basis: 38.5%;
+  }
+
+  @include tablets {
+    flex-basis: 100%;
+  }
+}
+
+.project__bottom {
+  margin-left: 72px;
+  flex-basis: 65.1%;
+
+  @include desktop {
+    flex-basis: 61.5%;
+  }
+
+  @include tablets {
+    margin-left: auto;
+    margin-top: 35px;
+    flex-basis: 100%;
+  }
+
+  @include phones {
+    margin-top: 20px;
+  }
+
+}
+
+
+.project__subtitle {
+  margin-bottom: 30px;
+
+  @include desktop {
+    min-height: 85px;
+  }
+
+  @include tablets {
+    margin-bottom: 25px;
+    min-height: auto;
+  }
+
+  @include phones {
+    margin-bottom: 20px;
+  }
+}
+.project__block {
+  line-height: 1.2;
+}
+
+.project__block + .project__block {
+  margin-top: 18px;
+
+  @include phones {
+    margin-top: 8px;
+  }
+}
+
+.project__transportation {
+  background-color: $gray-dark;
+  color: $brown;
+  position: relative;
+  border-radius: 14px;
+  padding: 88px 118px 47px 38px;
+  height: 183px;
+  max-width: 523px;
+
+  @include phones {
+    padding: 80px 20px 33px 35px;
+    height: 157px;
+  }
+}
+
+.project__transportation-img {
+  width: 56px;
+  height: 48px;
+  position: absolute;
+  left: 38px;
+  top: 28px;
+
+  @include phones {
+    left: 35px;
+    top: 26px;
+  }
+}
+
+.project__transportation-img-elem {
+
+}
+
+.project__transportation-desc {
+  @include raleway(medium);
+  font-size: 20px;
+
+  @include phones {
+    font-size: 18px;
+  }
+}
+
+.project__note {
+  padding: 63px 94px 66px 34px;
+  background-color: #76B9B9;
+  border-radius: 14px;
+  font-size: 30px;
+  @include raleway(medium);
+  height: 273px;
+
+  @include desktop {
+    height: 333px;
+  }
+
+  @include tablets {
+    height: 273px;
+  }
+}
+
+.project__note:not(.project__note--addittional) {
+  @include tablets {
+    display: none;
+  }
+}
+
+.project__note span {
+  @include raleway(bold);
+
+}
+
+
+.project__advantages-top,
+.project__advantages-bottom {
+  display: flex;
+}
+
+.project__advantages-top {
+  @include desktop {
+    flex-direction: row-reverse;
+  }
+
+  @include phones {
+    flex-direction: column-reverse;
+  }
+}
+
+.project__advantages-bottom {
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+
+.project__advantages-top .project__advantages-item {
+  height: 183px;
+
+  @include phones {
+    height: 134px;
+    min-height: 134px;
+  }
+}
+
+.project__advantages-bottom .project__advantages-item {
+  height: 273px;
+
+  @include desktop {
+    height: 333px;
+  }
+
+  @include tablets {
+    height: 273px;
+  }
+
+  @include phones {
+    height: 134px;
+    min-height: 134px;
+  }
+}
+
+.project__advantages-item {
+  background-color: $gray-dark;
+  color: $brown;
+  position: relative;
+  border-radius: 14px;
+  padding: 45px 30px;
+  position: relative;
+  font-size: 20px;
+  @include raleway(medium);
+
+  @include phones {
+    padding: 18px 50px 14px 22px;
+    font-size: 18px;
+  }
+}
+
+.project__advantages-img {
+  fill: $green;
+  position: absolute;
+}
+
+.project__advantages-text {}
+
+.project__advantages-item + .project__advantages-item {
+  margin-left: 18px;
+
+  @include phones {
+    margin-left: initial;
+    margin-top: 8px;
+  }
+}
+
+.project__advantages-top .project__advantages-item+.project__advantages-item {
+  @include desktop {
+    margin-left: 0;
+  }
+}
+.project__advantages-top .project__advantages-item:first-child {
+  @include desktop {
+    margin-left: 18px;
+  }
+  @include phones {
+    margin-left: initial;
+    margin-top: 8px;
+  }
+}
+.project__advantages-item--decline {
+  flex-basis: 43%;
+  padding: 44px 87px 44px 30px;
+
+  @include desktop {
+    padding: 44px 24px 44px 38px;
+    flex-basis: 30%;
+  }
+
+  @include phones {
+    padding: 41px 180px 58px 23px;
+  }
+}
+
+.project__advantages-item--decline .project__advantages-img {
+  top: 80px;
+
+  @include desktop {
+    top: 100px;
+    right: 25px;
+  }
+
+  @include phones {
+    top: 35px;
+    right: 11px;
+    width: 52px;
+    height: 48px;
+  }
+}
+
+.project__advantages-item--document {
+  flex-basis: 57%;
+  padding: 45px 222px 43px 30px;
+
+  @include desktop {
+    padding: 45px 100px 43px 30px;
+    flex-basis: 70%;
+  }
+
+  @include phones {
+    padding: 14px 95px 14px 22px;
+  }
+}
+
+.project__advantages-item--document .project__advantages-img {
+  right: 71px;
+  top: 56px;
+
+  @include desktop {
+    top: 44px;
+    right: 19px;
+  }
+
+  @include phones {
+    top: 53px;
+    right: 21px;
+    width: 51px;
+    height: 50px;
+  }
+}
+
+
+.project__advantages-item--tool {
+  flex-basis: 55%;
+  padding: 45px 87px 45px 30px;
+
+  @include desktop {
+    padding: 45px 43px 45px 30px;
+  }
+
+  @include phones {
+    padding: 16px 70px 14px 22px;
+  }
+
+}
+.project__advantages-item--tool .project__advantages-img {
+  top: 160px;
+  right: 38px;
+
+  @include desktop {
+    right: auto;
+    left: 30px;
+  }
+
+  @include phones {
+    top: 69px;
+    right: 19px;
+    left: initial;
+    width: 46px;
+    height: 45px;
+  }
+}
+
+.project__advantages-item--location {
+  flex-basis: 45%;
+  padding: 45px 93px 45px 30px;
+
+  @include desktop {
+    padding: 45px 76px 45px 29px;
+  }
+
+  @include phones {
+    padding: 29px 83px 23px 22px;
+  }
+
+}
+
+.project__advantages-item--location .project__advantages-img {
+  top: 164px;
+  right: 57px;
+
+  @include phones {
+    top: 46px;
+    right: 15px;
+    width: 54px;
+    height: 54px;
+  }
+}
+
+.ptoject__btns {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.project__note--addittional {
+  display: none;
+
+  @include tablets {
+    display: block;
+    margin-bottom: 28px;
+    font-size: 24px;
+    padding: 49px 110px 49px 39px;
+    height: 185px;
+  }
+
+  @include phones {
+    font-size: 18px;
+    padding: 20px 40px;
+    height: 134px;
+  }
+}
+
+.project__btn {
+  margin-right: 20px;
+
+  @include phones {
+    margin-right: 10px;
+    padding: 20px 13px;
+  }
+}
+
+.project__prompt-btn {
+  @include inter(bold);
+  margin-right: 17px;
+  margin-top: 15px;
+  background-color: $gray-dark;
+  color: $brown;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+
+  @include phones {
+    width: 37px;
+    height: 37px;
+    margin-top: 5px;
+  }
+}
+
+
+.project__prompt {
+  padding: 35px;
+  background-color: #E3E3E3;
+  color: $brown;
+  max-width: 586px;
+  border-radius: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+
+  @include tablets {
+    position: absolute;
+    top: 80px;
+    left: calc(40% + 23px);
+  }
+
+  @include phones {
+    left: 0;
+  }
+}
+
+.project__prompt._active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project__prompt-title {
+  @include inter(bold);
+  margin-bottom: 18px;
+  font-size: 20px;
+}
+
+.project__prompt-list {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 80%;
+    background-color: $green;
+    left: 9px;
+    top: 10px;
+  }
+}
+
+.project__prompt-item {
+  margin-left: 48px;
+  @include inter(regular);
+
+  @include numbers-list();
+}
+
+.project__prompt-item+.project__prompt-item {
+  margin-top: 17px;
+}

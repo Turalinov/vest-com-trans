@@ -19,7 +19,13 @@
 }
 
 @mixin raleway($style: regular) {
-  font-family: "Raleway", "Arial", sans-serif;
+  font-family: "Raleway",
+  "Arial",
+  sans-serif;
+
+  @if $style==regular {
+    font-weight: 400;
+  }
 
   @if $style == medium {
     font-weight: 500;
@@ -54,6 +60,29 @@
     &:nth-child(#{$i}) {
       &:after {
         content: '#{$i}';
+      }
+    }
+  }
+}
+
+
+@mixin numbers-list{
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      &:before {
+        position: absolute;
+        left: 0;
+        content: '#{$i}';
+        display: inline-flex;
+        background-color: $white;
+        border-radius: 50%;
+        width: 21px;
+        height: 21px;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        @include inter(semibold);
+        font-size: 14px;
       }
     }
   }
