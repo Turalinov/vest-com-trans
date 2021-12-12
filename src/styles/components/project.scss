@@ -71,7 +71,7 @@
   }
 
   @include tablets {
-    margin-left: auto;
+    margin-left: initial;
     margin-top: 35px;
     flex-basis: 100%;
   }
@@ -441,6 +441,8 @@
   justify-content: center;
   font-size: 24px;
   cursor: pointer;
+  margin-right: auto;
+
 
   @include phones {
     width: 37px;
