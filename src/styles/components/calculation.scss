@@ -1,0 +1,152 @@
+.calculation {
+  background-color: #ececec;
+  padding: 100px 0 100px;
+  overflow-y: hidden;
+
+  @include tablets {
+    padding: 100px 0 790px;
+  }
+
+  @include phones {
+    padding: 75px 0 395px;
+  }
+}
+
+.calculation > .container {
+  position: relative;
+
+  @include tablets {
+    padding: 0 120px;
+  }
+
+  @include phones {
+    padding: 0 15px;
+  }
+}
+
+.calculation__title {
+  margin-bottom: 20px;
+
+  @include tablets {
+    margin-bottom: 5px;
+  }
+}
+
+.calculation__desc {
+  @include inter(regular);
+  font-size: 24px;
+  max-width: 500px;
+  margin-bottom: 60px;
+
+  @include tablets {
+    margin-bottom: 35px;
+  }
+
+  @include phones {
+    max-width: 338px;
+    font-size: 18px;
+    margin-bottom: 23px;
+  }
+}
+
+.calculation__form {
+  max-width: 1113px;
+
+  @include desktop {
+    max-width: 991px;
+  }
+}
+
+.calculation__img-wrap {
+  position: absolute;
+  bottom: -110px;
+  right: 0;
+
+  @include desktop {
+    //
+  }
+
+  @include tablets {
+    bottom: -810px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include phones {
+    left: 108px;
+    bottom: -400px;
+    transform: initial;
+  }
+}
+
+.calculation__img {
+  @include desktop {
+    width: 412px;
+    height: 617px;
+  }
+
+  @include tablets {
+    height: initial;
+  }
+
+  @include phones {
+    width: 237px;
+  }
+}
+
+.calculation__ptompt {
+  width: 201px;
+  height: 201px;
+  background-color: $green;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50px;
+  right: 40px;
+
+  @include desktop {
+    width: 175px;
+    height: 175px;
+    top: 117px;
+    right: 77px;
+  }
+
+  @include tablets {
+    background-color: $white;
+    width: 197px;
+    height: 197px;
+    top: initial;
+    right: initial;
+    bottom: -320px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include phones {
+    width: 180px;
+    height: 180px;
+    left: 23px;
+    transform: initial;
+  }
+}
+
+.calculation__prompt-text {
+  @include raleway(medium);
+  max-width: 84%;
+  color: $white;
+  font-size: 14px;
+
+  @include desktop {
+    max-width: 80%;
+  }
+
+  @include tablets {
+    color: $brown;
+  }
+}
+.calculation__prompt-text span {
+  @include raleway(bold);
+}
+

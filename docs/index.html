@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@500;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="main.min.css">
 </head>
@@ -410,7 +410,79 @@
   </div>
 </section>
 
-        <h1>calculation</h1>
+        <section class="calculation">
+  <div class="container">
+    <h2 class="calculation__title">Получите бесплатный расчет</h2>
+    <div class="calculation__desc">Заполните форму, и наш оператор свяжется с вами в ближайшее время</div>
+
+    <div class="calculation__form form">
+      <form action="#" class="form__elem">
+        <div class="form__main">
+          <div class="form__top">
+            <div class="form__row">
+              <label class="form__block">
+                <div class="form__block-title">Дата отправки</div>
+                <input type="text" name="departure_date" class="form__input" placeholder="10.10.2021">
+              </label>
+              <label class="form__block">
+                <div class="form__block-title">Станция отправления</div>
+                <input type="text" name="departure_station" class="form__input">
+              </label>
+              <label class="form__block">
+                <div class="form__block-title">Кубатура</div>
+                <input type="text" name="cubature" class="form__input">
+              </label>
+              <label class="form__block">
+                <div class="form__block-title">Телефон</div>
+                <input type="phone" name="phone" class="form__input" placeholder="+7 777 777 77 77">
+              </label>
+            </div>
+          </div>
+          <div class="form__bottom">
+            <div class="form__row">
+              <label class="form__block">
+                <div class="form__block-title">Название компании</div>
+                <input type="text" name="company_name" class="form__input">
+              </label>
+              <label class="form__block">
+                <div class="form__block-title">Станция назначения</div>
+                <input type="text" name="destination_station" class="form__input">
+              </label>
+              <label class="form__block">
+                <div class="form__block-title">Тоннаж</div>
+                <input type="text" name="tonnage" class="form__input">
+              </label>
+              <label class="form__block">
+                <div class="form__block-title">Имя</div>
+                <input type="text" name="name" class="form__input" placeholder="Антон">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form__additional">
+          <button class="btn form__btn">Отправить</button>
+          <label class="form__checkbox-wrap">
+            <input type="checkbox" name="politics" class="form__checkbox" checked>
+            <div class="form__appearance"></div>
+            <div class="form__checkbox-text">Я принимаю соглашение сайт об <a href="#" class="form__politics-link" target="blank">обработке персональных данных</a></div>
+          </label>
+        </div>
+      </form>
+    </div>
+
+    <div class="calculation__img-wrap">
+      <img src="images/mackup.png" alt="mackup" class="calculation__img" width="471" height="711">
+    </div>
+
+    <div class="calculation__ptompt">
+      <div class="calculation__prompt-text">
+        Каждый <span>вторник</span> мы выставляем вагоны по всей сети РЖД,<br>
+        <span>не упусти возможность</span>!
+      </div>
+    </div>
+
+  </div>
+</section>
 
         <section class="section contacts" id="contacts">
   <div class="container">

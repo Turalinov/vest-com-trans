@@ -2,65 +2,195 @@
   box-sizing: border-box;
 }
 
-.form__row {
-  // display: flex;
+.form__elem {
+  //
 }
 
-.form__elem>.form__row+.form__row {
-  margin-top: 45px;
+.form__main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -15px;
+  margin-bottom: 47px;
+
+  @include tablets {
+    margin-bottom: 45px;
+    flex-direction: column;
+  }
 
   @include phones {
-    margin-top: 40px;
+    margin-top: -8px;
+    margin-bottom: 15px;
   }
+}
+
+.form__top {
+  width: 100%;
+}
+
+.form__bottom {
+  margin-left: 30px;
+  width: 100%;
+
+  @include tablets {
+    margin-left: initial;
+  }
+}
+
+.form__row {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__block {
+  margin-top: 15px;
+
+  @include phones {
+    margin-top: 8px;
+  }
+}
+
+.form__block-title {
+  margin-bottom: 5px;
 }
 
 .form__input {
-  font-size: 20px;
-  color: $white;
-  background: transparent;
-  width: 100%;
-  padding: 0px 20px 20px 0px;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid rgba($white, 0.2);
 
-  @include tablets {
-    font-size: 18px;
-    padding: 0px 15px 15px 0px;
-  }
-
-  @include phones {
-    font-size: 16px;
-  }
 }
 
-.form__input:focus {
-  border-bottom: 1px solid rgba($white, 0.5);
-}
-
-.form__input--textarea {
-  font-size: 20px;
-  color: $white;
-  background: transparent;
-  resize: unset;
-  height: 173px;
-
-  @include tablets {
-    font-size: 18px;
-  }
+.form__additional {
+  display: flex;
 
   @include phones {
-    font-size: 16px;
-    height: 119px;
+    flex-direction: column-reverse;
   }
 }
 
 .form__btn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin-right: 22px;
+
+  @include tablets {
+    padding: 21px 57px 20px 61px;
+  }
+
+  @include phones {
+    margin-right: initial;
+    max-width: 221px;
+    padding: 15px 61px;
+  }
 }
+
+.form__checkbox-wrap {
+  display: flex;
+  align-items: flex-start;
+
+  @include tablets {
+    margin-bottom: 12px;
+  }
+}
+
+.form__checkbox {
+  display: none;
+}
+
+.form__appearance {
+  width: 22px;
+  height: 22px;
+  background-color: $white;
+  border-radius: 5px;
+  position: relative;
+  margin-right: 10px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-image: url("images/check.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.form__checkbox:checked ~ .form__appearance:before {
+  width: 10px;
+  height: 7px;
+  transition: .2s;
+}
+
+.form__checkbox-text {
+  @include inter();
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 250px;
+  color: rgba($brown, 0.6);
+}
+
+.form__politics-link {
+  color: rgba($brown, 0.6);
+  text-decoration: underline;
+}
+
+
+// .form__elem>.form__row+.form__row {
+//   margin-top: 45px;
+
+//   @include phones {
+//     margin-top: 40px;
+//   }
+// }
+
+// .form__input {
+//   font-size: 20px;
+//   color: $white;
+//   background: transparent;
+//   width: 100%;
+//   padding: 0px 20px 20px 0px;
+//   border: none;
+//   outline: none;
+//   border-bottom: 1px solid rgba($white, 0.2);
+
+//   @include tablets {
+//     font-size: 18px;
+//     padding: 0px 15px 15px 0px;
+//   }
+
+//   @include phones {
+//     font-size: 16px;
+//   }
+// }
+
+// .form__input:focus {
+//   border-bottom: 1px solid rgba($white, 0.5);
+// }
+
+// .form__input--textarea {
+//   font-size: 20px;
+//   color: $white;
+//   background: transparent;
+//   resize: unset;
+//   height: 173px;
+
+//   @include tablets {
+//     font-size: 18px;
+//   }
+
+//   @include phones {
+//     font-size: 16px;
+//     height: 119px;
+//   }
+// }
+
+// .form__btn {
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
 
 .form__btn .liquid {
   // top: -369px;
@@ -73,16 +203,16 @@
   // }
 }
 
-.form__error {
-  opacity: 0;
-  // color: $orange;
-  font-size: 12px;
+// .form__error {
+//   opacity: 0;
+//   // color: $orange;
+//   font-size: 12px;
 
-  @include phones {
-    font-size: 9px;
-  }
-}
+//   @include phones {
+//     font-size: 9px;
+//   }
+// }
 
-.form__error--active {
-  opacity: 1;
-}
+// .form__error--active {
+//   opacity: 1;
+// }

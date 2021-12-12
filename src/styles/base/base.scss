@@ -39,20 +39,24 @@ ul > li {
 
 input:not([type="checkbox"]):not([type="radio"]),
 select {
+  font-size: 18px;
   width: 100%;
+  outline: none;
+  background: $white;
+  padding: 21px 25px;
+  border-radius: 14px;
+  @include inter(light);
+  color: $brown;
+  border: 1px solid transparent;
 
-  // width: 100%;
-  // outline: none;
-  // background: #FFFFFF;
-  // @include regular();
-  // color: $black;
-  // border-radius: 10px;
-  // padding: rem(19px) rem(23px);
-  // border: 1px solid transparent;
+  @include phones {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
 
-  // &:focus {
-  //   border-color: $brown-dark;
-  // }
+  &:focus {
+    border-color: $brown;
+  }
 }
 
 a {

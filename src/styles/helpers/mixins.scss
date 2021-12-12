@@ -1,6 +1,10 @@
 @mixin inter($style: regular) {
   font-family: "Inter", "Arial", sans-serif;
 
+  @if $style == light {
+    font-weight: 300;
+  }
+
   @if $style == regular {
     font-weight: 400;
   }
