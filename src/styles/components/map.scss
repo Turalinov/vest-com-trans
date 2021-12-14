@@ -1,0 +1,13 @@
+.map {
+  cursor: pointer;
+}
+
+.map__elem {
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.map._active > .map__elem {
+  pointer-events: auto;
+}
