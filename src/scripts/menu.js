@@ -17,6 +17,7 @@
 
 
   const menuLinks = document.querySelectorAll('.menu__link');
+  const header = document.querySelector('.header');
 
   menuLinks.forEach((menuLink) => {
     menuLink.addEventListener('click', (e) => {
@@ -27,17 +28,17 @@
       if (blockId.indexOf('#') === 0) {
         e.preventDefault();
 
+        const element = document.querySelector(blockId);
+        const offset = header.clientHeight;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementReact = element.getBoundingClientRect().top;
+        const elementPosition = elementReact - bodyRect;
+        const offsetPositon = elementPosition - offset;
 
-        const el = document.querySelector(blockId);
-
-        if(el) {
-          el.scrollIntoView({
+        window.scrollTo({
+          top: offsetPositon,
           behavior: 'smooth',
         })
-
-        }
-      } else {
-
       }
 
 
