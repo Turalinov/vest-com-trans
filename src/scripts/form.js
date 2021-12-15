@@ -1,16 +1,17 @@
 (function() {
   console.log('contacts form');
 
-  const form = document.getElementById('form-contacts');
+  const form = document.querySelector('.form__elem');
 
   if( form ) {
   form.addEventListener('submit', function(e) {
     //отменяем действие по умолчанию
     e.preventDefault();
 
-    //получаем кнопку
-    const btn = form.querySelector('.form__btn');
 
+    //получаем кнопку
+    let btn = form.querySelector('.form__btn'),
+        error = form.querySelector('.form__error')
 
     //получаем данные
     let inputs = form.elements;
@@ -20,29 +21,42 @@
     for (let i = 0; i < inputs.length; i++) {
 
       let input = inputs.item(i);
+      let label = input?.previousElementSibling?.textContent;
       let name  = input.name;
-      let error = input.nextElementSibling
-
       let value = String(input.value).trim()
       let tagName = input.tagName.toLowerCase();
+      let type = input.type;
 
+      //прописать условие о пользовательском соглашении
 
-      console.log(tagName);
+      if ( type == "checkbox") {
+          continue;
+      }
+
       if (tagName == 'button') {
           continue;
       }
 
-
-
       if (value == "")  {
-        error.classList.add('form__error--active')
+        error.textContent = `Заполните поле "${label}"`;
+        error.classList.add('_active')
         return false;
       } else {
-        error.classList.remove('form__error--active');
-        obj[name] = value;
+        error.textContent = '';
+        error.classList.remove('_active')
+        obj[name] = [value, label];
       }
 
-      console.log(obj);
+      // console.log(obj);
+
+        // company_name: "dsds"
+        // cubature: "dsdsd"
+        // departure_date: "sdsds"
+        // departure_station: "dsds"
+        // destination_station: "dsd"
+        // name: "dsdsd"
+        // phone: "sdsd"
+        // tonnage: "dsds"
     }
 
 
@@ -67,7 +81,7 @@
       }
     }
     // /wp-content/themes/{theme}/action-form.php
-    postData('action-form.php', { messageObj : obj})
+    postData('action-form.php', {obj})
     .then((data) => {
       if(data.status) {
         this.reset();

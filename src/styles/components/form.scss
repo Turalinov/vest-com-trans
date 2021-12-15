@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: -15px;
-  margin-bottom: 47px;
+  margin-bottom: 17px;
 
   @include tablets {
     margin-bottom: 45px;
@@ -21,6 +21,18 @@
     margin-top: -8px;
     margin-bottom: 15px;
   }
+}
+
+.form__error {
+  opacity: 0;
+  visibility: hidden;
+  color: rgb(185, 29, 29);
+  margin-bottom: 27px;
+}
+
+.form__error._active {
+  opacity: initial;
+  visibility: initial;
 }
 
 .form__top {

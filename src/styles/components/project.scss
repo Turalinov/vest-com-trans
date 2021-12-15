@@ -453,18 +453,18 @@
 
 
 .project__prompt {
+  position: absolute;
   padding: 35px;
   background-color: #E3E3E3;
   color: $brown;
   max-width: 586px;
   border-radius: 14px;
-  opacity: 0;
-  visibility: hidden;
+  display: none;
   transition: 0.2s ease;
+  left: 548px;
   z-index: 1;
 
   @include tablets {
-    position: absolute;
     top: 80px;
     left: calc(40% + 23px);
   }
@@ -475,8 +475,7 @@
 }
 
 .project__prompt._active {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
 .project__prompt-title {
