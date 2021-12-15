@@ -1,0 +1,17 @@
+.back-btn {
+  padding-left: 82px;
+  background-image: url("images/back-btn.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  @include raleway(medium);
+  font-size: 24px;
+
+  @include phones {
+    padding-left: 55px;
+    background-image: url("images/back-btn-mobile.svg");
+    font-size: 16px;
+  }
+}

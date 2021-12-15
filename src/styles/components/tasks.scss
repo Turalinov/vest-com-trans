@@ -1,0 +1,90 @@
+.tasks {
+  padding: 16px 0 100px;
+  background-color: $white;
+
+  @include phones {
+    padding: 20px 0 70px;
+  }
+}
+
+.tasks___btn {
+  margin-bottom: 20px;
+}
+
+.tasks__title {
+  margin-bottom: 15px;
+
+  @include phones {
+    margin-bottom: 10px;
+  }
+}
+
+.tasks__desc {
+  @include inter(regular);
+  font-size: 24px;
+  max-width: 944px;
+  margin-bottom: 30px;
+
+  @include tablets {
+    font-size: 18px;
+    max-width: 578px;
+    margin-bottom: 20px;
+  }
+
+  @include phones {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+.tasks__subtitle {
+  margin-bottom: 40px;
+
+  @include tablets {
+    margin-bottom: 15px;
+  }
+
+  @include phones {
+    margin-bottom: 10px;
+  }
+}
+
+.tasks__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks__item {
+  @include inter(semibold);
+  border: 1px solid $green;
+  border-radius: 14px;
+  padding: 41px 41px 41px 317px;
+  background-image: url("images/arrow-left.svg");
+  background-repeat: no-repeat;
+  background-position: left 59px center;
+  background-size: 175px 35px;
+  font-size: 24px;
+
+  @include tablets {
+    padding: 41px 20px 41px 148px;
+    background-position: left 39px center;
+    background-size: 97px 20px;
+    font-size: 18px;
+  }
+
+  @include phones {
+    @include inter(medium);
+    padding: 70px 20px 45px 40px;
+    background-position: left 40px top 40px;
+    background-size: 97px 20px;
+    font-size: 18px;
+  }
+}
+
+.tasks__item + .tasks__item {
+  margin-top: 25px;
+
+  @include phones {
+    margin-top: 8px;
+  }
+}
