@@ -29,16 +29,31 @@
         e.preventDefault();
 
         const element = document.querySelector(blockId);
-        const offset = header.clientHeight;
-        const bodyRect = document.body.getBoundingClientRect().top;
-        const elementReact = element.getBoundingClientRect().top;
-        const elementPosition = elementReact - bodyRect;
-        const offsetPositon = elementPosition - offset;
 
-        window.scrollTo({
-          top: offsetPositon,
-          behavior: 'smooth',
-        })
+
+        if(element != null ) {
+
+          const offset = header.clientHeight;
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementReact = element.getBoundingClientRect().top;
+          const elementPosition = elementReact - bodyRect;
+          const offsetPositon = elementPosition - offset;
+
+          window.scrollTo({
+            top: offsetPositon,
+            behavior: 'smooth',
+          })
+
+        } else {
+
+          transition(blockId)
+
+          function transition(blockId){
+            localStorage.setItem('blockId', blockId)
+            document.location.href = window.location.origin;
+          }
+
+        }
       }
 
 
@@ -55,6 +70,39 @@
 
   }
 
+
+  document.addEventListener("DOMContentLoaded", ready);
+
+  function ready() {
+    console.log('ready dom');
+    let blockId = localStorage.getItem('blockId')
+
+    if (blockId != null) {
+    const header = document.querySelector('.header');
+
+        const element = document.querySelector(blockId);
+
+
+        if(element != null ) {
+
+          const offset = header.clientHeight;
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementReact = element.getBoundingClientRect().top;
+          const elementPosition = elementReact - bodyRect;
+          const offsetPositon = elementPosition - offset;
+
+          window.scrollTo({
+            top: offsetPositon,
+            behavior: 'smooth',
+          })
+
+        }
+    }
+
+    setTimeout(() => {
+      localStorage.removeItem('blockId')
+    }, 1000);
+  }
 
 
 
