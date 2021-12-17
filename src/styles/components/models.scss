@@ -67,10 +67,6 @@
   @include tablets {
     margin-top: 25px;
   }
-
-  @include phones {
-    margin-top: 15px;
-  }
 }
 
 .models__top {
@@ -164,35 +160,35 @@
   }
 }
 
-.models__body-top {
+.models__body-bottom {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.models__body-bottom-top {
   font-size: 20px;
   margin-bottom: 20px;
 
   @include tablets {
+    @include inter(regular);
+    font-size: 18px;
+    order: 20;
     margin-bottom: 0;
     margin-top: 18px;
+    margin-bottom: 18px;
   }
 
   @include phones {
+    font-size: 16px;
     margin-top: 16px;
+    margin-bottom: 16px;
   }
 }
 
-.models__body-bottom {
-  display: flex;
-
-  @include tablets {
-    flex-direction: column-reverse;
-  }
-}
-
-.models__body-bottom > div:nth-child(1) {
-  flex-basis: 50%;
-
-  @include tablets {
-    flex-basis: initial;
-  }
-}
 
 .models__body-bottom > div:nth-child(2) {
   flex-basis: 50%;
@@ -202,7 +198,18 @@
   }
 }
 
+.models__body-bottom > div:nth-child(3) {
+  flex-basis: 50%;
+
+  @include tablets {
+    flex-basis: initial;
+  }
+}
+
 .models__body-bottom-left {
+  @include tablets {
+    order: 30;
+  }
 
 }
 
@@ -249,21 +256,24 @@
 }
 
 .models__body-bottom-right {
-  margin-left: 16px;
-
   @include tablets {
-    margin-left: 0;
+    order: 10;
   }
 }
 
 .models__body-bottom-right-img-wrap {
+  padding-left: 16px;
+
+  @include tablets {
+    padding-left: 0;
+  }
 
 }
 
-.models__body-bottom-right-img{
+.models__body-bottom-right-img {
+  height: 100%;
    @include tablets {
      margin: 0 auto;
-     height: 100%;
    }
 }
 
